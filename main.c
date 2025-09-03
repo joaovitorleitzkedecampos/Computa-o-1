@@ -1,7 +1,7 @@
 /******************************************************************************
 
 Welcome to GDB Online.
-  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby,
   C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
   Code, Compile, Run and Debug online from anywhere in world.
 
@@ -9,10 +9,19 @@ Welcome to GDB Online.
 #include <stdio.h>
 
 int main() {
-    printf ("Calculo do IMC \n");
-    printf ("Altura: %f \n", 1.64);
-    printf ("Peso : %f \n", 62.5);
-    
-    printf ("IMC: %f ",62.5 / (1.64* 1.64));
-    return 0;
+	int  n, i=0;
+	float test1, test2, test3, mp;
+
+	printf("digite a quantidade de testes");
+	scanf("%d",&n);
+	for(i=0; n>i; i++)
+	{
+		printf("digite as tres notas");
+		scanf("%f""%f""%f",&test1,&test2,&test3);
+
+		mp=(test1*2+test2*3+test3*5)/10;
+		printf("%.1f\n", mp);
+	}
+
+	return 0;
 }
