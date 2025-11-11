@@ -18,7 +18,7 @@ int main() {
 		return 1;
 	}
 
-	printf("Digite %d nC:meros inteiros:\n", TAM);
+	printf("Digite %d numeros inteiros:\n", TAM);
 	for (int i = 0; i < TAM; i++) {
 		printf("NC:mero %d: ", i + 1);
 		scanf("%d", &numeros[i]);
@@ -54,4 +54,5 @@ int main() {
 	printf("\nMC)dia dos nC:meros: %.2f\n", media);
 
 	return 0;
+
 }
