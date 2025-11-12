@@ -31,21 +31,22 @@ void inverterString(char str[]) {
 
 int main() {
     char matriz[LINHAS][COLUNAS][TAM_STRING];
+    char matrizOriginal[LINHAS][COLUNAS][TAM_STRING];
 
     printf("Preencha a matriz 3x3 com strings (máx 50 caracteres cada):\n");
     for (int i = 0; i < LINHAS; i++) {
         for (int j = 0; j < COLUNAS; j++) {
             printf("Digite a string para a posição [%d][%d]: ", i, j);
             fgets(matriz[i][j], TAM_STRING, stdin);
-
+          
             
             size_t len = strlen(matriz[i][j]);
             if (len > 0 && matriz[i][j][len - 1] == '\n') {
                 matriz[i][j][len - 1] = '\0';
                 len--; 
             }
-
-           
+            strcpy(matrizOriginal[i][j], matriz[i][j]);
+    
             if (len > 0) {
                 
                 if (ehVogal(matriz[i][j][0]) && ehConsoante(matriz[i][j][strlen(matriz[i][j]) - 1])) {
@@ -54,7 +55,15 @@ int main() {
             }
         }
     }
-
+           
+        
+ printf("\nMatriz original:\n");
+    for (int i = 0; i < LINHAS; i++) {
+        for (int j = 0; j < COLUNAS; j++) {
+            printf("%s\t", matrizOriginal[i][j]);
+        }
+        printf("\n");
+    }
     
     printf("\nMatriz resultante:\n");
     for (int i = 0; i < LINHAS; i++) {
