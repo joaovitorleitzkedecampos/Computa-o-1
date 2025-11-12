@@ -20,7 +20,7 @@ int main() {
 
 	printf("Digite %d numeros inteiros:\n", TAM);
 	for (int i = 0; i < TAM; i++) {
-		printf("NC:mero %d: ", i + 1);
+		printf("Numero %d: ", i + 1);
 		scanf("%d", &numeros[i]);
 		fprintf(arquivo, "%d\n", numeros[i]);
 	}
@@ -43,16 +43,17 @@ int main() {
 
 	float media = calculaMedia(vetorLido, i);
 
-	printf("\nNC:meros lidos do arquivo:\n");
+	printf("\nNumeros lidos do arquivo:\n");
 	for (int j = 0; j < i; j++) {
 		printf("%d ", vetorLido[j]);
 	}
-	printf("\n\nConteC:do do vetor:\n");
+	printf("\n\nConteudo do vetor:\n");
 	for (int j = 0; j < i; j++) {
 		printf("vetor[%d] = %d\n", j, vetorLido[j]);
 	}
-	printf("\nMC)dia dos nC:meros: %.2f\n", media);
+	printf("\nMedia dos numeros: %.2f\n", media);
 
 	return 0;
 
 }
+
